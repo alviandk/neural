@@ -49,11 +49,11 @@ plt.plot(input_data.T[0:1, :], input_data.T[1:2, :], 'ko')
 sofmnet.train(input_data, epochs=60)
 
 print("> Start ")
-#plt.xlim(-1, 1.2)
-#plt.ylim(-1, 1.2)
+plt.xlim(-1, 1.2)
+plt.ylim(-1, 1.2)
 
-#plt.plot(sofmnet.weight[0:1, :], sofmnet.weight[1:2, :], 'bx')
-#plt.show()
+plt.plot(sofmnet.weight[0:1, :], sofmnet.weight[1:2, :], 'bx')
+plt.show()
 
 #for data in input_data:
 #    print(sofmnet.predict(np.reshape(data, (5, 1)).T))

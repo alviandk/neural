@@ -1,5 +1,8 @@
 learning radius=1,2,3
 noutput=10, berapa cluster yang didapat untuk tiap learning radius
 plot grafic dari train error
-
+centroid cluster
 coba learning rate 0,5 dan 0,005
+epoch 1000
+total cluster
+siapa aja yang masuk cluster tersebut
