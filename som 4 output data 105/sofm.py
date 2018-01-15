@@ -5,10 +5,34 @@ import pprint
 
 import json
 
+def convert_centroid(centroid):
+  mapped = [
+    {0.0:'A', 0.5:'B', 1.0:'C'}, #1
+    {1.0:'Y', 0.0:'T'}, #2
+    {1.0:'Y', 0.0:'T'}, #3
+    {1.0:'Y', 0.0:'T'}, #4
+    {1.0:'L', 0.0:'I'}, #5
+    {1.0:'C', 0.0:'T'}, #6
+    {1.0:'K', 0.0:'G'}, #7
+    {1.0:'Y', 0.0:'T'}, #8
+    {1.0:'Y', 0.0:'T'}, #9
+    {1.0:'Y', 0.0:'T'}, #10
+    {1.0:'WL', 0.0:'WM'}, #11
+    {1.0:'Y', 0.0:'T'}, #12
+    {1.0:'WL', 0.0:'WM'}, #13
+    {1.0:'Y', 0.0:'T'}, #14
+    {0.0:'P', 0.34:'Q', 0.67:'R', 1.0:'S'},
+  ]
+  mapped_centroid = []
+  for index, item in enumerate(centroid):
+      mapped_centroid.append(mapped[index][item])
+  return mapped_centroid
+
+
 start_time = time.time()
 
 environment.reproducible()
-file_name = 'gabung'
+file_name = 'mhs'
 data = np.genfromtxt(file_name+'.csv', delimiter=',')
 learning_rate=0.005
 radius=1
@@ -42,7 +66,7 @@ plt.title('data gabungan, learning radius '+str(radius))
 plt.xlabel('epoch')
 plt.ylabel('error')
 #plt.show()
-plt.savefig('graph_{}_{}.png'.format(file_name, radius), bbox_inches='tight')
+plt.savefig('rad{}/graph_{}_{}.png'.format(radius, file_name, radius), bbox_inches='tight')
 
 ''' print result on screen '''
 for d in data:
@@ -50,7 +74,7 @@ for d in data:
 
 
 ''' export result to csv '''
-np.savetxt('result_{}_{}.csv'.format(file_name, radius), sofm.predict(data), delimiter=",")
+np.savetxt('rad{}/result_{}_{}.csv'.format(radius, file_name, radius), sofm.predict(data), delimiter=",")
 
 
 def roundPartial (value, resolution):
@@ -59,6 +83,7 @@ def roundPartial (value, resolution):
 index_cluster = []
 centroid_cluster = {}
 mapped_centroid_cluster = {}
+mapped_centroid_char_cluster = {}
 cluster_member = {}
 
 for data_idx, data in enumerate(predict_data):    
@@ -76,6 +101,7 @@ for data_idx, data in enumerate(predict_data):
 
         cluster_list = []
         mapped_cluster_list = []
+
         # centroid
         for idx, weight in enumerate(sofm.weight):
             # centroid value
@@ -93,25 +119,32 @@ for data_idx, data in enumerate(predict_data):
                 mapped_cluster_list.append(round(centroid_weight))
         centroid_cluster['cluster_'+str(cluster_idx_1)] = cluster_list
         mapped_centroid_cluster['cluster_'+str(cluster_idx_1)] = mapped_cluster_list
+        mapped_centroid_char_cluster['cluster_'+str(cluster_idx_1)] =convert_centroid(mapped_cluster_list)
 
     # update value cluster member and total
     cluster_member['cluster_'+str(cluster_idx_1)]['member'].append(data_idx+1)
     cluster_member['cluster_'+str(cluster_idx_1)]['total'] += 1
 
-with open('centroid_{}_{}.py'.format(file_name, radius), 'w') as f:
+
+with open('rad{}/centroid_{}_{}.py'.format(radius, file_name, radius), 'w') as f:
 	f.write('centroid cluster\n')
 	f.write(json.dumps(centroid_cluster, sort_keys=True))
-  f.write('\n')
-
+	f.write('\n')
 
 	f.write('mapped centroid cluster\n')
 	f.write(json.dumps(mapped_centroid_cluster, sort_keys=True))
-  f.write('\n')
+	f.write('\n')
+
+	f.write('mapped centroid cluster (char)\n')
+	f.write(json.dumps(mapped_centroid_char_cluster, sort_keys=True))
+	f.write('\n')
 
 	f.write('cluster member\n')
 	f.write(json.dumps(cluster_member, sort_keys=True))
-  f.write('\n')
+	f.write('\n')
 	#f.writeln("--- %s seconds ---" % (time.time() - start_time))
+
+
 
 '''
 example:
