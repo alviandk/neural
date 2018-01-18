@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block current_download %}active{% endblock %}
+{% block step_generate %}current{% endblock %}
+{% block step_download %}current{% endblock %}
+{% block content %}
+  <div class="row padding-60">
+      <div class="col-lg-10 offset-lg-2">
+          <h1>Download XUL</h1>
+
+          {% for cluster in request.session.result.cluster %}
+             <h4>Aplikasi XUL {{cluster.name}}</h4>
+             <p>Jumlah anggota: {{cluster.member_count}}<br>
+                Centroid: {{cluster.centroid}}
+                <a href="" class="btn btn-primary">Download</a>
+             </p>
+
+          {% endfor %}
+
+      </div>
+  </div>
+{% endblock %}

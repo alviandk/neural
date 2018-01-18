@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Shop Homepage - Start Bootstrap Template</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <!--<link href="{% static 'css/shop-homepage.css' %}" rel="stylesheet">-->
+    <style>
+      /* Global CSS, you probably don't need that */
+
+      .clearfix:after {
+          clear: both;
+          content: "";
+          display: block;
+          height: 0;
+      }
+
+      .container {
+          font-family: 'Lato', sans-serif;
+          width: 1000px;
+          margin: 0 auto;
+      }
+
+      .wrapper {
+          display: table-cell;
+          height: 400px;
+          vertical-align: middle;
+      }
+
+      .nav {
+          margin-top: 40px;
+      }
+
+      .pull-right {
+          float: right;
+      }
+
+      a, a:active {
+          color: #333;
+          text-decoration: none;
+      }
+
+      a:hover {
+          color: #999;
+      }
+
+      /* Breadcrups CSS */
+
+      .arrow-steps .step {
+          font-size: 14px;
+          text-align: center;
+          color: #666;
+          cursor: default;
+          margin: 0 10px;
+          padding: 5px 10px 10px 30px;
+          min-width: 180px;
+          float: left;
+          position: relative;
+          background-color: #d9e3f7;
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          -ms-user-select: none;
+          user-select: none;
+        transition: background-color 0.2s ease;
+      }
+
+      .arrow-steps .step:after,
+      .arrow-steps .step:before {
+          content: " ";
+          position: absolute;
+          top: 0;
+          right: -17px;
+          width: 0;
+          height: 0;
+          border-top: 19px solid transparent;
+          border-bottom: 17px solid transparent;
+          border-left: 17px solid #d9e3f7;
+          z-index: 2;
+        transition: border-color 0.2s ease;
+      }
+
+      .arrow-steps .step:before {
+          right: auto;
+          left: 0;
+          border-left: 17px solid #fff;
+          z-index: 0;
+      }
+
+      .arrow-steps .step:first-child:before {
+          border: none;
+      }
+
+      .arrow-steps .step:first-child {
+          border-top-left-radius: 4px;
+          border-bottom-left-radius: 4px;
+      }
+
+      .arrow-steps .step span {
+          position: relative;
+      }
+
+      .arrow-steps .step span:before {
+          opacity: 0;
+          content: "✔";
+          position: absolute;
+          top: -2px;
+          left: -20px;
+      }
+
+      .arrow-steps .step.done span:before {
+          opacity: 1;
+          -webkit-transition: opacity 0.3s ease 0.5s;
+          -moz-transition: opacity 0.3s ease 0.5s;
+          -ms-transition: opacity 0.3s ease 0.5s;
+          transition: opacity 0.3s ease 0.5s;
+      }
+
+      .arrow-steps .step.current {
+          color: #fff;
+          background-color: #23468c;
+      }
+
+      .arrow-steps .step.current:after {
+          border-left: 17px solid #23468c;
+      }
+      /* Sticky footer styles
+      -------------------------------------------------- */
+      html {
+        position: relative;
+        min-height: 100%;
+      }
+      body {
+        margin-bottom: 60px; /* Margin bottom by footer height */
+      }
+      .footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 60px; /* Set the fixed height of the footer here */
+        line-height: 60px; /* Vertically center the text there */
+        background-color: #333;
+      }
+      .padding-60{
+        padding-bottom: 60px;
+      }
+      .padding-20{
+        padding-bottom: 20px;
+      }
+      .blue{
+        color: blue;
+      }
+
+    </style>
+
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="#">UIRE</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item {% block current_uire %}{% endblock %}">
+              <a class="nav-link" href="\">Isi Uire</a>
+            </li>
+            <li class="nav-item {% block current_generate %}{% endblock %}">
+              <a class="nav-link" href="\generate">Generate Cluster</a>
+            </li>
+            <li class="nav-item {% block current_download %}{% endblock %}">
+              <a class="nav-link" href="\download">Download XUL</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container my-4">
+      <div class="row">
+        <div class="col-lg-10 offset-lg-2">
+
+            <div class="arrow-steps clearfix">
+              <a href="\"><div class="step current"> <span>Isi Uire</span> </div></a>
+              <a href="\generate"><div class="step {% block step_generate %}{% endblock %}"> <span>Generate Cluster</span> </div></a>
+              <a href="\download"><div class="step {% block step_download %}{% endblock %}"> <span>Download XUL</span> </div></a>
+            </div>
+            <div class="nav clearfix">
+            </div>
+
+        </div>
+      </div>
+
+      {% block content %}
+
+      {% endblock content %}
+
+    </div>
+    <!-- /.container -->
+    <div class="clear-fix"></div>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <span class="text-muted">@Copyright 2017</span>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script>
+    /**/
+    jQuery( document ).ready(function() {
+
+		var back =jQuery(".prev");
+		var	next = jQuery(".next");
+		var	steps = jQuery(".step");
+
+		next.bind("click", function() {
+			jQuery.each( steps, function( i ) {
+				if (!jQuery(steps[i]).hasClass('current') && !jQuery(steps[i]).hasClass('done')) {
+					jQuery(steps[i]).addClass('current');
+					jQuery(steps[i - 1]).removeClass('current').addClass('done');
+					return false;
+				}
+			})
+		});
+		back.bind("click", function() {
+			jQuery.each( steps, function( i ) {
+				if (jQuery(steps[i]).hasClass('done') && jQuery(steps[i + 1]).hasClass('current')) {
+					jQuery(steps[i + 1]).removeClass('current');
+					jQuery(steps[i]).removeClass('done').addClass('current');
+					return false;
+				}
+			})
+		});
+
+	})
+  </script>
+
+  </body>
+
+</html>

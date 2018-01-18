@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+  <div class="row">
+      <div class="col-lg-9 offset-lg-3">
+          <h1>Anda masuk ke {{ cluster }}</h1>
+          {% if cluster == 'cluster 1' %}
+            <img src="https://lh5.googleusercontent.com/J9IJEYROxNn13L_dVHGRm5_ezn8T_Gjk3xTYQCtWG0LuiHiK7aubV7RtKyv2qphbEgq3yIfgIlH3SsOjpfQ0G4njPWt3f141rZmNJkorlmBIAVKs6Apgax8-_f-HVCtCipuVRCDAgY-NDlU">
+          {% elif cluster == 'cluster 2' %}
+            <img src="https://lh4.googleusercontent.com/IkZ4pwA0Ul4BEqe7dGSfj9V9QIyhFTB8-HNLrvuAwHnmNEmj6feqDQVW52T_BpYvE1AEQx4CVc6t2B1KGupAGoimMtalxS6txho-4t7-CcFCcLSGJUy2S6N4pz8PUxwseYysczJ5Em2ldsE">
+          {% endif %}
+      </div>
+  </div>
+{% endblock  %}

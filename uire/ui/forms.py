@@ -1,5 +1,18 @@
 from django import forms
 
+from .models import Survey
+
+
+class SurveyModelForm(forms.ModelForm):
+    class Meta:
+        model = Survey
+        fields = '__all__'
+
+    def __init__(self, *args, **kwargs):
+        super(SurveyModelForm, self).__init__(*args, **kwargs)
+        for field_name, field in self.fields.items():
+            field.required = True
+
 
 class SurveyForm(forms.Form):
     question_1 = forms.ChoiceField(
@@ -31,8 +44,8 @@ class SurveyForm(forms.Form):
         label='6. Icon navigasi yang diinginkan berbentuk ',
         widget=forms.RadioSelect,
         choices=(
-            ('L', 'Gambar/image (misal intruksi cari bergambar “kaca pembesar”) ',),
-            ('I', 'Teks/texts  (misal  intruksi cari bertuliskan “search” )',)
+            ('C', 'Gambar/image (misal intruksi cari bergambar “kaca pembesar”) ',),
+            ('T', 'Teks/texts  (misal  intruksi cari bertuliskan “search” )',)
         )
     )
     question_7 = forms.ChoiceField(
@@ -90,3 +103,25 @@ class SurveyForm(forms.Form):
         super(SurveyForm, self).__init__(*args, **kwargs)
         for field_name, field in self.fields.items():
             field.required = True
+
+
+class IdentityForm(forms.Form):
+    nama = forms.CharField()
+    umur = forms.IntegerField()
+    pekerjaan = forms.CharField()
+    jenis_kelamin = forms.ChoiceField(choices=(('L', 'Laki-Laki'), ('P', 'Perempuan')))
+    pendidikan = forms.CharField()
+
+    def __init__(self, *args, **kwargs):
+        super(IdentityForm, self).__init__(*args, **kwargs)
+        for field_name, field in self.fields.items():
+            field.widget.attrs['class'] = 'form-control'
+
+
+class LimitForm(forms.Form):
+    limit = forms.FloatField(help_text='between 0-1')
+
+    def __init__(self, *args, **kwargs):
+        super(LimitForm, self).__init__(*args, **kwargs)
+        for field_name, field in self.fields.items():
+            field.widget.attrs['class'] = 'form-control'

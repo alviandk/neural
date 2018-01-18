@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block current_generate %}active{% endblock %}
+{% block step_generate %}current{% endblock %}
+{% block content %}
+  <div class="row padding-20">
+      <div class="col-lg-10 offset-lg-2">
+          <h1>Generate Cluster</h1>
+          {% csrf_token %}
+          {% for field in limit_form %}
+              <div class="form-group">
+                  <label>{{ field.label_tag }}</label>
+                  {{ field.errors }}
+                  {{field}}
+                  {% if field.help_text %}
+                    <smal class="text-muted">{{ field.help_text|safe }}</smal>
+                  {% endif %}
+              </div>
+          {% endfor %}
+          <button class="btn btn-primary">Generate</button>
+
+      </div>
+  </div>
+  <div class="row padding-60">
+      <div class="col-lg-10 offset-lg-2">
+          <h3>Current Total Cluster: {{result.cluster_count}}</h3>
+
+          {% for cluster in result.cluster %}
+            <h4>{{cluster.name}}</h4>
+            <p>Jumlah anggota: {{cluster.member_count}}</p>
+            <p>Centroid: {{cluster.centroid}}</p>
+          {% endfor %}
+          <h5>Jumlah seluruh anggota: {{result.total_members}}</h5>
+      </div>
+  </div>
+{% endblock %}
