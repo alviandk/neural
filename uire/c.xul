@@ -1,0 +1,310 @@
+<?xml version="1.0"?>
+
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<?xml-stylesheet href="style.css" type="text/css"?>
+
+<window id="main" width="650" height="1000" title="My App" xmlns:html="http://www.w3.org/1999/xhtml" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+	<vbox id="mybox">
+<vbox id="secondbox">
+		<html:p>  
+		<box id="not_simple">
+			<menulist editable="true" style="width:130px;">
+				<menupopup>
+					<menuitem label="Tepat"/>
+					<menuitem label="Mengandung" selected="true"/>
+					<menuitem label="Mengawali"  />
+				</menupopup>
+			</menulist>
+			<menulist editable="true">
+				<menupopup>
+					<menuitem label="Judul" selected="true"/>
+					<menuitem label="Pengarang"/>
+					<menuitem label="Penerbit"  />
+				</menupopup>
+			</menulist>
+		</box>
+		  <html:br></html:br>
+		  <html:input id="input_search"/>
+		  <html:a id="search_text" hidden="true" style="border-style:solid; padding:3px; font-size:12px;">Search</html:a>
+		  <image src='image/search.png' width='20' height='20' id="search_icon" hidden="true" style="padding-top:7px"/>
+		  <html:br></html:br>
+
+		  <!-- 2. spellcheck -->
+		  <html:i id="spellcheck">  Apakah yang anda maksud "computer"</html:i>
+		  <html:br></html:br>
+			<box id="taxon" hidden="true">
+				
+				<html:span>Technology:</html:span><html:br></html:br>
+				<html:span style="margin-left:20px;">--> Electrical engineering. Electronics. Nuclear engineering:</html:span><html:br></html:br>
+				<html:span style="margin-left:40px;">---> Electronics:</html:span><html:br></html:br>
+				<html:span style="margin-left:60px; color:red;">----> Computer engineering. Computer hardware:</html:span>
+			</box>
+		</html:p>
+
+		<box>			
+			<caption id="based" label="Urutan berdasarkan:" hidden="true"/><html:br></html:br>
+			<menulist id="relevan" editable="true" width='100' hidden="true">
+				<menupopup>
+					<menuitem label="Relevansi" selected="true"/>
+					<menuitem label="Abjad"  />
+					<menuitem label="Popularitas"  />
+				</menupopup>
+			</menulist>
+			<menulist id="popular" editable="true" width='130' hidden="true">
+				<menupopup>
+					<menuitem label="Relevansi"/>
+					<menuitem label="Abjad"  />
+					<menuitem label="Popularitas" selected="true" />
+				</menupopup>
+			</menulist>
+
+		</box>
+
+		  <html:hr></html:hr>
+		<html:p id="bg1">
+			<hbox>
+			<box id="im_1">
+			<image src='image/im1.jpeg' width='50' height='50' id="search_icon" hidden="false" />
+			</box>
+<box style="padding-left:10px">
+			<html:span id="title_1" >Langkah Mudah Membangun Jaringan Komputer</html:span>
+					<html:br></html:br>	
+			<html:span>			
+				<html:span id="subtitle_1">Pengarang : Zaenal Arifin</html:span>
+				<html:span id="lengkap_1" hidden="true">				
+					<html:br></html:br>
+					<html:span style="font-family: arial;">Penerbit : Erlangga </html:span><html:br></html:br>
+					<html:span style="font-family: arial;">Kota : Yogyakarta </html:span><html:br></html:br>
+					<html:span style="font-family: arial;">Jumlah halaman : 112 </html:span><html:br></html:br>
+					<html:span style="font-family: arial;">Tahun : 2012 </html:span>
+				</html:span>
+
+			</html:span>			
+</box>
+</hbox>
+					<html:br></html:br>					<html:br></html:br>
+		<box id="rekomendasi1">
+
+			Rekomendasi buku yang relevan:
+			<html:br></html:br>
+<hbox>
+			<box id="im_rekom">
+			<image src='image/no_image.png' width='30' height='30' id="search_icon" hidden="false" />
+			</box>
+<box style="padding-left:10px">
+			<html:span>Penanganan jaringan komputer</html:span><html:br></html:br>
+			<html:span style="font-family: arial;">Pengarang : Andi</html:span><html:br></html:br>
+</box>
+</hbox>
+		</box>
+		</html:p>
+		  <html:hr></html:hr>
+		<html:p id="bg2">
+			<box id="im_2">
+			<image src='image/im2.jpeg' width='50' height='50' id="search_icon" hidden="false" />
+			</box>
+			<html:span id="title_2">Teknologi Informasi Pendidikan : Membahas Materi Dasar Teknologi Informasi yang wajib dikuasai Pemula TI</html:span><html:br></html:br>
+
+
+			<html:p>			
+				<html:span id="subtitle_2">Pengarang : RIYANTO - Lantip Diat Prasojo</html:span>
+				<html:span id="lengkap_2" hidden="true">				
+					<html:br></html:br>
+					<html:span style="font-family: arial;">Penerbit : Erlangga </html:span><html:br></html:br>
+					<html:span style="font-family: arial;">Kota : Yogyakarta </html:span><html:br></html:br>
+					<html:span style="font-family: arial;">Jumlah halaman : 112 </html:span><html:br></html:br>
+					<html:span style="font-family: arial;">Tahun : 2012 </html:span>
+				</html:span>
+
+			</html:p>			
+
+
+		</html:p>
+		  <html:hr></html:hr>
+		<html:p id="bg3">
+			<box id="im_3">
+			<image src='image/im3.jpeg' width='50' height='50' id="search_icon" hidden="false" />
+			</box>
+			<html:span id="title_3">Pengenalan Komputer : Dasar Ilmu Komputer, Pemrograman, Sistem Informasi dan Intelegensi Buatan</html:span><html:br></html:br>
+
+			<html:p>			
+				<html:span id="subtitle_3">Pengarang : Jogiyanto H.M</html:span>
+				<html:span id="lengkap_3" hidden="true">				
+					<html:br></html:br>
+					<html:span style="font-family: arial;">Penerbit : Erlangga </html:span><html:br></html:br>
+					<html:span style="font-family: arial;">Kota : Yogyakarta </html:span><html:br></html:br>
+					<html:span style="font-family: arial;">Jumlah halaman : 112 </html:span><html:br></html:br>
+					<html:span style="font-family: arial;">Tahun : 2012 </html:span>
+				</html:span>
+
+			</html:p>			
+
+
+		</html:p>
+		  <html:hr></html:hr>
+	</vbox>
+</vbox>
+
+  <script type="application/javascript">
+
+var centroid=[];
+// 1. Model pencarian/searching yang diinginkan berbentuk kategori
+if (centroid[0] == 'A'){
+  // Toxonomy
+	
+  document.getElementById("taxon").hidden = false;
+} else if(centroid[0] == 'B'){
+  // Keyword
+
+} else if(centroid[0] == 'C'){
+  // Image
+}
+
+// 2. Adanya fasilitas Spellcheck
+if (centroid[1] == 'Y'){
+  document.getElementById("spellcheck").hidden = false;
+  document.getElementById("input_search").value = "compter";  
+} else if(centroid[1] == 'T'){
+  document.getElementById("spellcheck").hidden = true;
+} 
+
+// 3. Adanya rekomendasi buku yang relevan
+if (centroid[2] == 'Y'){
+
+} else if(centroid[2] == 'T'){
+	document.getElementById("rekomendasi1").hidden = true;	
+} 
+
+// 4. Adanya hasil pencarian yang diranking berdasarkan relevansinya dengan kebutuhan
+if (centroid[3] == 'Y'){
+	document.getElementById("based").hidden = false;
+	document.getElementById("relevan").hidden = false;	
+} else if(centroid[3] == 'T'){
+
+} 
+
+
+// 5. Navigasi penelusuran pencarian/searching yang dinginkan berbentuk
+if (centroid[4] == 'L'){
+  // Link
+  
+  document.getElementById("im_1").hidden = true;
+  document.getElementById("im_2").hidden = true;
+  document.getElementById("im_3").hidden = true;
+  document.getElementById("im_rekom").hidden = true;
+  
+} else if(centroid[4] == 'I'){
+  // Icon
+} 
+
+// 6. Icon navigasi yang diinginkan berbentuk 
+if (centroid[5] == 'C'){
+  // Gambar
+  document.getElementById("search_icon").hidden = false;
+
+} else if(centroid[5] == 'T'){
+  // Teks
+  document.getElementById("search_text").hidden = false;
+} 
+
+// 7. Ukuran icon navigasi yang diinginkan 
+if (centroid[6] == 'K'){
+  // Kecil
+
+} else if(centroid[6] == 'G'){
+  // Besar
+  document.getElementById("search_icon").width = "40";
+  document.getElementById("search_icon").height = "40";
+  document.getElementById("search_icon").style.padding = "20px 0 0 0";
+
+  document.getElementById("search_text").style.cssText = "border-style:solid; padding:3px; font-size: 18px;";
+} 
+
+// 8. Adanya batasan bentuk/tipe  huruf  dalam disain antarmuka OPAC.        
+if (centroid[7] == 'Y'){
+
+} else if(centroid[7] == 'T'){
+   document.getElementById("subtitle_1").style.cssText = "font-family: arial";	
+   document.getElementById("subtitle_2").style.cssText = "font-family: arial";	
+   document.getElementById("subtitle_3").style.cssText = "font-family: arial";	
+
+} 
+
+
+// 9. Adanya batasan ukuran/size huruf dalam disain antarmuka OPAC
+if (centroid[8] == 'Y'){
+
+} else if(centroid[8] == 'T'){
+   document.getElementById("title_1").style.cssText = "font-size: 18px;";
+   document.getElementById("title_2").style.cssText = "font-size: 18px;";
+   document.getElementById("title_3").style.cssText = "font-size: 18px;";
+} 
+
+// 10. Adanya batasan jumlah warna dalam disain antarmuka OPAC         
+if (centroid[9] == 'Y'){
+	document.getElementById("spellcheck").style.cssText = "padding-left:5px; color:blue;"
+} else if(centroid[9] == 'T'){
+
+} 
+
+// 11. Warna disain antarmuka  yang diinginkan :
+if (centroid[10] == 'WL'){
+  // lembut
+
+} else if(centroid[10] == 'WM'){
+  // mencolok
+	document.getElementById("spellcheck").style.cssText = "padding-left:5px; color:red;"
+
+} 
+
+
+// 12. Adanya batasan jumlah warna  background dalam disain antarmuka OPAC  
+if (centroid[11] == 'Y'){
+
+} else if(centroid[11] == 'T'){
+	document.getElementById("bg1").style.cssText = "background-color:white;"
+	document.getElementById("bg2").style.cssText = "background-color:white;"
+	document.getElementById("bg3").style.cssText = "background-color:white;"
+} 
+
+document.getElementById("secondbox").style.cssText = "padding:10px";
+// 13. Warna background antarmuka yang diinginkan 
+if (centroid[12] == 'WL'){
+  // lembut
+  document.getElementById("mybox").style.cssText = "background-color: #F0F8FF;";
+} else if(centroid[12] == 'WM'){
+  // mencolok
+  document.getElementById("mybox").style.cssText = "background-color: blue;";
+} 
+
+// 14. Desain antarmuka pencarian/searching dengan bentuk sederhana  (Y/T)
+if (centroid[13] == 'Y'){
+  document.getElementById("not_simple").hidden = true
+} else if(centroid[13] == 'T'){
+
+} 
+
+// 15. Hasil pencarian/searching  yang diinginkan Menampilkan:
+if (centroid[14] == 'P'){
+  // semua informasi obyek
+  document.getElementById("lengkap_1").hidden = false
+  document.getElementById("lengkap_2").hidden = false
+  document.getElementById("lengkap_3").hidden = false
+
+} else if(centroid[14] == 'Q'){
+  // informasi hanya obyek yang diminta
+
+} else if(centroid[14] == 'R'){
+  // informasi dengan menambahkan referensi sumber lain yang relevan
+	document.getElementById("rekomendasi1").hidden = false;	
+
+} else if(centroid[14] == 'S'){
+  // Menampilkan Informasi diurutkan berdasarkan popularitas
+	document.getElementById("based").hidden = false;
+	document.getElementById("popular").hidden = false;
+
+}
+	</script>
+</window>
+

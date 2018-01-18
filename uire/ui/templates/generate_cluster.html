@@ -5,18 +5,20 @@
   <div class="row padding-20">
       <div class="col-lg-10 offset-lg-2">
           <h1>Generate Cluster</h1>
-          {% csrf_token %}
-          {% for field in limit_form %}
-              <div class="form-group">
-                  <label>{{ field.label_tag }}</label>
-                  {{ field.errors }}
-                  {{field}}
-                  {% if field.help_text %}
-                    <smal class="text-muted">{{ field.help_text|safe }}</smal>
-                  {% endif %}
-              </div>
-          {% endfor %}
-          <button class="btn btn-primary">Generate</button>
+          <form method="post">
+              {% csrf_token %}
+              {% for field in limit_form %}
+                  <div class="form-group">
+                      <label>{{ field.label_tag }}</label>
+                      {{ field.errors }}
+                      {{field}}
+                      {% if field.help_text %}
+                        <small class="text-muted">{{ field.help_text|safe }}</small>
+                      {% endif %}
+                  </div>
+              {% endfor %}
+              <button class="btn btn-primary" type="submit">Generate</button>
+          </form>
 
       </div>
   </div>

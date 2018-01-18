@@ -1,10 +1,11 @@
-import json
 import redis
 import csv
 import uuid
 import pandas as pd
 import ast
-from django.shortcuts import render, redirect
+
+from django.shortcuts import render
+from django.http import HttpResponse
 
 from .forms import SurveyForm, IdentityForm, LimitForm
 
@@ -20,8 +21,39 @@ def download(request):
     return render(request, 'download_xul.html')
 
 
+def download_xul(request, cluster_name):
+    response = HttpResponse(cluster_name)
+    download_file = cluster_name.replace(' ', '_') + '.xul'
+    with open('main.xul') as fh:
+        lines = fh.readlines()
+    with open('main.js') as fj:
+        js_lines = fj.readlines()
+        with open(download_file, 'w') as fc:
+            fc.writelines(lines)
+            centroid = []
+            for cluster in request.session['result']['cluster']:
+                # print(cluster)
+                if cluster_name == cluster['name']:
+                     centroid = cluster['centroid']
+            fc.write(
+                'var centroid=' + str(centroid) + ';'
+            )
+            fc.writelines(js_lines)
+
+    with open(download_file, 'rb') as fh:
+        response = HttpResponse(fh.read(), content_type="application/vnd.mozilla.xul+xml")
+        response['Content-Disposition'] = 'inline; filename=' + cluster_name + '.xul'
+    return response
+
+
 def generate(request):
     limit_form = LimitForm()
+    if request.method == 'POST':
+        limit_form = LimitForm(request.POST)
+        if limit_form.is_valid():
+            limit = request.POST.get('limit')
+            main_art(koefisien=limit)
+
     result = out_art()
     request.session['result'] = result
     return render(request, 'generate_cluster.html', {'limit_form': limit_form, 'result': result})
@@ -33,6 +65,7 @@ def index(request):
     context = {}
     if request.method == 'POST':
         survey_form = SurveyForm(request.POST)
+        identity_form = IdentityForm(request.POST)
         if survey_form.is_valid():
             post = survey_form.cleaned_data
             uire = []
@@ -96,22 +129,20 @@ class tanimoto(object):
         return float(len(intersection)) / (len(self.list1) + len(self.list2) - len(intersection))
 
 
-def main_art():
+def main_art(koefisien=0.57):
     r = redis.StrictRedis(host='localhost', decode_responses=True, port=6379, db=0)
     r.flushdb()
     index = 0
-
-    koefisien = 0.57
 
     # openin CSV file
     file_open = open('gabung_char2.csv', 'r')
     csv_lists = csv.reader(file_open)
 
     # loop by number of line in csv file
-    for datax in csv_lists:
+    for idex, datax in enumerate(csv_lists):
         # print(datax)
         # generate database key from input data
-        data_id = "data:" + str(uuid.uuid4())
+        data_id = "data:" + str(idex)
         # Query all data keys in redis database
         item_keys = r.keys("data:*")
         print("jumlah data: " + str(len(item_keys)))
@@ -121,7 +152,7 @@ def main_art():
 
         if len(item_keys) == 0:
             # generate "new group key"
-            group_key = "group:" + str(uuid.uuid4())
+            group_key = "group:" + str(idex)
             data_key = data_id
             # value dari key data, di tambah komponen group
             value_data = {"group": group_key, "data": datax}

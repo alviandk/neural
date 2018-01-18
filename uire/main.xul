@@ -1,0 +1,150 @@
+<?xml version="1.0"?>
+
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<?xml-stylesheet href="style.css" type="text/css"?>
+
+<window id="main" width="650" height="1000" title="My App" xmlns:html="http://www.w3.org/1999/xhtml" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+	<vbox id="mybox">
+<vbox id="secondbox">
+		<html:p>  
+		<box id="not_simple">
+			<menulist editable="true" style="width:130px;">
+				<menupopup>
+					<menuitem label="Tepat"/>
+					<menuitem label="Mengandung" selected="true"/>
+					<menuitem label="Mengawali"  />
+				</menupopup>
+			</menulist>
+			<menulist editable="true">
+				<menupopup>
+					<menuitem label="Judul" selected="true"/>
+					<menuitem label="Pengarang"/>
+					<menuitem label="Penerbit"  />
+				</menupopup>
+			</menulist>
+		</box>
+		  <html:br></html:br>
+		  <html:input id="input_search"/>
+		  <html:a id="search_text" hidden="true" style="border-style:solid; padding:3px; font-size:12px;">Search</html:a>
+		  <image src='image/search.png' width='20' height='20' id="search_icon" hidden="true" style="padding-top:7px"/>
+		  <html:br></html:br>
+
+		  <!-- 2. spellcheck -->
+		  <html:i id="spellcheck">  Apakah yang anda maksud "computer"</html:i>
+		  <html:br></html:br>
+			<box id="taxon" hidden="true">
+				
+				<html:span>Technology:</html:span><html:br></html:br>
+				<html:span style="margin-left:20px;">--> Electrical engineering. Electronics. Nuclear engineering:</html:span><html:br></html:br>
+				<html:span style="margin-left:40px;">---> Electronics:</html:span><html:br></html:br>
+				<html:span style="margin-left:60px; color:red;">----> Computer engineering. Computer hardware:</html:span>
+			</box>
+		</html:p>
+
+		<box>			
+			<caption id="based" label="Urutan berdasarkan:" hidden="true"/><html:br></html:br>
+			<menulist id="relevan" editable="true" width='100' hidden="true">
+				<menupopup>
+					<menuitem label="Relevansi" selected="true"/>
+					<menuitem label="Abjad"  />
+					<menuitem label="Popularitas"  />
+				</menupopup>
+			</menulist>
+			<menulist id="popular" editable="true" width='130' hidden="true">
+				<menupopup>
+					<menuitem label="Relevansi"/>
+					<menuitem label="Abjad"  />
+					<menuitem label="Popularitas" selected="true" />
+				</menupopup>
+			</menulist>
+
+		</box>
+
+		  <html:hr></html:hr>
+		<html:p id="bg1">
+			<hbox>
+			<box id="im_1">
+			<image src='image/im1.jpeg' width='50' height='50' id="search_icon" hidden="false" />
+			</box>
+<box style="padding-left:10px">
+			<html:span id="title_1" >Langkah Mudah Membangun Jaringan Komputer</html:span>
+					<html:br></html:br>	
+			<html:span>			
+				<html:span id="subtitle_1">Pengarang : Zaenal Arifin</html:span>
+				<html:span id="lengkap_1" hidden="true">				
+					<html:br></html:br>
+					<html:span style="font-family: arial;">Penerbit : Erlangga </html:span><html:br></html:br>
+					<html:span style="font-family: arial;">Kota : Yogyakarta </html:span><html:br></html:br>
+					<html:span style="font-family: arial;">Jumlah halaman : 112 </html:span><html:br></html:br>
+					<html:span style="font-family: arial;">Tahun : 2012 </html:span>
+				</html:span>
+
+			</html:span>			
+</box>
+</hbox>
+					<html:br></html:br>					<html:br></html:br>
+		<box id="rekomendasi1">
+
+			Rekomendasi buku yang relevan:
+			<html:br></html:br>
+<hbox>
+			<box id="im_rekom">
+			<image src='image/no_image.png' width='30' height='30' id="search_icon" hidden="false" />
+			</box>
+<box style="padding-left:10px">
+			<html:span>Penanganan jaringan komputer</html:span><html:br></html:br>
+			<html:span style="font-family: arial;">Pengarang : Andi</html:span><html:br></html:br>
+</box>
+</hbox>
+		</box>
+		</html:p>
+		  <html:hr></html:hr>
+		<html:p id="bg2">
+			<box id="im_2">
+			<image src='image/im2.jpeg' width='50' height='50' id="search_icon" hidden="false" />
+			</box>
+			<html:span id="title_2">Teknologi Informasi Pendidikan : Membahas Materi Dasar Teknologi Informasi yang wajib dikuasai Pemula TI</html:span><html:br></html:br>
+
+
+			<html:p>			
+				<html:span id="subtitle_2">Pengarang : RIYANTO - Lantip Diat Prasojo</html:span>
+				<html:span id="lengkap_2" hidden="true">				
+					<html:br></html:br>
+					<html:span style="font-family: arial;">Penerbit : Erlangga </html:span><html:br></html:br>
+					<html:span style="font-family: arial;">Kota : Yogyakarta </html:span><html:br></html:br>
+					<html:span style="font-family: arial;">Jumlah halaman : 112 </html:span><html:br></html:br>
+					<html:span style="font-family: arial;">Tahun : 2012 </html:span>
+				</html:span>
+
+			</html:p>			
+
+
+		</html:p>
+		  <html:hr></html:hr>
+		<html:p id="bg3">
+			<box id="im_3">
+			<image src='image/im3.jpeg' width='50' height='50' id="search_icon" hidden="false" />
+			</box>
+			<html:span id="title_3">Pengenalan Komputer : Dasar Ilmu Komputer, Pemrograman, Sistem Informasi dan Intelegensi Buatan</html:span><html:br></html:br>
+
+			<html:p>			
+				<html:span id="subtitle_3">Pengarang : Jogiyanto H.M</html:span>
+				<html:span id="lengkap_3" hidden="true">				
+					<html:br></html:br>
+					<html:span style="font-family: arial;">Penerbit : Erlangga </html:span><html:br></html:br>
+					<html:span style="font-family: arial;">Kota : Yogyakarta </html:span><html:br></html:br>
+					<html:span style="font-family: arial;">Jumlah halaman : 112 </html:span><html:br></html:br>
+					<html:span style="font-family: arial;">Tahun : 2012 </html:span>
+				</html:span>
+
+			</html:p>			
+
+
+		</html:p>
+		  <html:hr></html:hr>
+	</vbox>
+</vbox>
+
+  <script type="application/javascript">
+
