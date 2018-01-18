@@ -16,13 +16,14 @@ koefisien = sys.argv[2]
 # openin CSV file
 file_open = open(file_input, 'r')
 csv_lists = csv.reader(file_open)
+print('csv_lists', csv_lists)
 
 index = 0
 # loop by number of line in csv file
-for datax in csv_lists:
+for idex, datax in enumerate(csv_lists):
     # print(datax)
     # generate database key from input data
-    data_id = "data:" + str(uuid.uuid4())
+    data_id = "data:" + str(idex)
     # Query all data keys in redis database
     item_keys = r.keys("data:*")
     print("jumlah data: " + str(len(item_keys)))
@@ -32,7 +33,7 @@ for datax in csv_lists:
 
     if len(item_keys) == 0:
         # generate "new group key"
-        group_key = "group:" + str(uuid.uuid4())
+        group_key = "group:" + str(idex)
         data_key = data_id
         # value dari key data, di tambah komponen group
         value_data = {"group": group_key, "data": datax}
@@ -69,7 +70,7 @@ for datax in csv_lists:
         if float(new_data) < float(koefisien):
             print("bedaaaaaaaaaaaa")
             # buat kunci untuk group dan data
-            group_key = "group:" + str(uuid.uuid4())
+            group_key = "group:" + str(idex)
             data_key = data_id
             # value dari data
             value_data = {"group": group_key, "data": datax}
