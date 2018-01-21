@@ -148,7 +148,7 @@
 
   <script type="application/javascript">
 
-var centroid=['B', 'Y', 'Y', 'Y', 'L', 'T', 'G', 'Y', 'Y', 'Y', 'WL', 'Y', 'WL', 'Y', 'R'];
+var centroid=['B', 'Y', 'T', 'Y', 'I', 'C', 'G', 'T', 'T', 'T', 'WL', 'T', 'WL', 'Y', 'S'];
 // 1. Model pencarian/searching yang diinginkan berbentuk kategori
 if (centroid[0] == 'A'){
   // Toxonomy

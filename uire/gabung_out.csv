@@ -1,124 +1,124 @@
 jumlah cluster: 3
 
 cluster 1 
-jumlah anggota: 20 
-------------------
-57, A, Y, Y, Y, L, T, G, Y, Y, Y, WM, Y, WM, Y, P
-73, B, Y, Y, Y, I, C, G, Y, Y, Y, WM, Y, WL, Y, R
-70, A, Y, Y, Y, I, C, G, Y, Y, Y, WL, Y, WL, Y, S
-5, B, Y, Y, Y, I, C, G, Y, Y, Y, WM, Y, WL, Y, P
-10, B, Y, Y, Y, I, C, G, Y, Y, Y, WM, Y, WL, Y, S
-101, B, Y, Y, Y, L, C, G, Y, Y, Y, WM, Y, WM, Y, S
-54, B, Y, Y, Y, L, C, G, Y, Y, Y, WM, Y, WM, Y, P
-55, A, Y, Y, Y, L, T, G, Y, Y, Y, WM, Y, WM, Y, P
-16, B, Y, Y, Y, I, C, G, Y, Y, Y, WL, Y, WM, Y, S
-102, B, Y, Y, Y, L, C, G, Y, Y, Y, WM, Y, WM, Y, S
-87, A, Y, Y, Y, I, C, G, Y, Y, Y, WM, Y, WL, Y, R
-97, A, Y, Y, Y, I, C, K, Y, Y, Y, WM, Y, WL, T, R
-103, A, Y, Y, Y, L, C, G, Y, Y, Y, WL, Y, WL, Y, S
-98, A, T, Y, Y, I, C, K, T, Y, Y, WM, T, WL, T, R
-90, A, Y, Y, Y, L, T, G, Y, Y, T, WM, Y, WL, Y, Q
-82, A, Y, Y, Y, I, C, G, Y, T, Y, WM, Y, WL, Y, S
-83, A, Y, Y, Y, I, C, G, Y, Y, Y, WM, Y, WM, Y, S
-61, A, Y, Y, Y, I, C, G, Y, Y, Y, WM, Y, WL, Y, S
-74, A, Y, Y, Y, I, C, K, Y, Y, Y, WM, Y, WL, Y, S
-56, A, Y, Y, Y, L, T, G, Y, Y, Y, WM, Y, WM, Y, P
-centroid: ['A', 'Y', 'Y', 'Y', 'I', 'C', 'G', 'Y', 'Y', 'Y', 'WM', 'Y', 'WL', 'Y', 'S']
-------------------
-
-cluster 2 
 jumlah anggota: 83 
 ------------------
-53, B, Y, Y, Y, L, T, K, T, T, Y, WL, Y, WL, Y, R
-62, B, Y, Y, Y, L, T, G, T, Y, T, WL, T, WL, Y, P
-33, B, Y, Y, Y, L, T, G, T, T, T, WM, T, WL, Y, R
-50, A, Y, Y, Y, L, T, K, Y, Y, Y, WL, Y, WL, Y, Q
-15, A, Y, Y, Y, L, C, K, Y, Y, Y, WL, Y, WL, Y, R
-63, B, Y, Y, Y, I, C, K, Y, Y, Y, WL, Y, WM, Y, R
-76, B, Y, Y, Y, I, C, K, Y, Y, Y, WM, T, WL, Y, R
-20, B, Y, Y, Y, L, T, G, T, T, Y, WL, Y, WL, Y, R
-32, A, Y, Y, Y, L, C, K, Y, Y, T, WL, T, WL, Y, R
-43, A, Y, Y, Y, L, T, G, Y, Y, Y, WL, Y, WL, Y, R
-89, A, Y, Y, Y, L, C, G, T, T, Y, WL, Y, WL, Y, R
-29, B, T, Y, T, I, T, G, Y, Y, Y, WM, Y, WL, Y, R
-72, A, T, Y, Y, I, T, K, Y, Y, Y, WL, Y, WL, Y, R
-7, B, T, Y, Y, I, T, G, Y, Y, Y, WL, Y, WM, Y, P
-9, A, Y, Y, Y, I, T, K, Y, Y, Y, WL, Y, WL, Y, R
-44, C, Y, Y, Y, L, T, G, T, T, T, WL, T, WL, Y, R
-3, A, Y, Y, Y, L, C, K, Y, Y, Y, WL, Y, WL, Y, R
-86, B, T, Y, Y, I, T, G, Y, Y, Y, WL, Y, WL, Y, R
-88, B, Y, Y, Y, L, C, G, Y, T, T, WL, T, WL, Y, R
-79, B, Y, Y, Y, I, C, K, Y, Y, Y, WL, Y, WL, Y, R
-52, A, Y, Y, T, I, C, K, Y, Y, Y, WL, Y, WL, Y, R
-35, B, Y, Y, Y, L, C, G, Y, Y, Y, WL, Y, WL, Y, R
-41, B, T, Y, Y, L, T, G, Y, Y, Y, WL, Y, WL, T, R
-100, B, Y, Y, Y, I, T, K, Y, T, T, WL, Y, WM, Y, R
-93, B, Y, Y, Y, I, C, K, T, Y, T, WL, Y, WL, T, Q
-30, A, Y, Y, Y, L, C, K, Y, Y, Y, WM, Y, WL, Y, R
-37, A, T, Y, Y, L, T, G, T, T, T, WL, T, WM, Y, R
-4, B, Y, Y, Y, L, T, G, T, Y, T, WL, T, WL, Y, P
-99, B, Y, Y, Y, I, C, K, Y, T, Y, WL, Y, WL, T, R
-14, B, T, Y, T, L, T, G, Y, Y, Y, WL, Y, WL, Y, R
-27, B, Y, Y, Y, L, C, K, Y, Y, Y, WL, Y, WL, Y, R
-49, B, Y, Y, Y, I, C, K, Y, Y, Y, WL, Y, WL, Y, R
-47, B, Y, Y, Y, L, T, G, Y, T, Y, WL, Y, WM, Y, R
-91, C, Y, Y, Y, L, C, K, Y, Y, Y, WL, Y, WL, Y, R
-81, B, Y, Y, Y, I, C, G, Y, Y, Y, WL, Y, WL, Y, R
-40, B, Y, Y, Y, L, T, G, Y, T, T, WL, Y, WL, Y, P
-8, B, T, Y, Y, I, T, G, Y, Y, Y, WM, Y, WL, Y, P
-25, B, Y, Y, Y, L, C, K, Y, Y, Y, WL, Y, WL, Y, R
-24, A, Y, Y, Y, L, T, G, Y, Y, Y, WL, Y, WL, Y, R
-22, A, Y, Y, Y, I, C, G, Y, Y, Y, WL, Y, WM, Y, Q
-36, B, Y, Y, Y, L, T, G, T, T, T, WM, T, WL, Y, Q
-96, B, Y, Y, Y, I, C, G, Y, Y, Y, WL, Y, WL, Y, R
-11, B, Y, Y, Y, L, T, K, Y, Y, Y, WM, Y, WL, Y, S
-71, B, Y, Y, Y, L, T, G, Y, Y, Y, WL, Y, WL, Y, R
-59, B, Y, Y, Y, I, T, K, Y, T, Y, WL, T, WL, T, R
-39, B, Y, Y, Y, L, T, G, Y, T, T, WL, Y, WL, Y, P
-38, B, Y, Y, Y, L, T, G, Y, T, T, WL, Y, WL, Y, P
-66, B, Y, Y, Y, L, T, G, Y, Y, Y, WL, Y, WL, Y, R
-19, B, Y, Y, Y, I, T, G, Y, Y, Y, WL, Y, WL, Y, P
-64, C, Y, Y, Y, I, C, G, Y, Y, Y, WL, Y, WL, Y, R
-51, B, Y, Y, Y, I, C, K, Y, Y, Y, WM, Y, WL, Y, R
-31, A, Y, Y, Y, L, C, G, Y, Y, Y, WM, Y, WL, T, R
-68, B, Y, Y, Y, I, C, K, Y, Y, Y, WL, Y, WL, Y, R
-85, B, Y, T, Y, L, C, G, Y, Y, Y, WL, Y, WL, Y, R
-75, A, Y, Y, Y, I, C, K, Y, Y, T, WL, T, WM, Y, R
-6, B, Y, Y, Y, L, T, G, Y, Y, Y, WL, Y, WL, Y, R
-92, A, Y, Y, Y, I, C, G, Y, Y, Y, WL, Y, WL, Y, R
-104, B, Y, Y, Y, I, T, G, Y, Y, Y, WL, Y, WL, Y, S
-95, A, Y, Y, Y, I, C, G, Y, Y, Y, WL, Y, WL, Y, Q
-48, B, Y, Y, Y, I, T, K, Y, Y, Y, WM, Y, WL, Y, S
-45, C, Y, Y, Y, L, C, G, Y, Y, Y, WM, Y, WL, Y, R
-13, B, T, Y, T, I, T, K, Y, Y, Y, WL, Y, WL, Y, Q
-26, C, Y, Y, Y, L, C, K, Y, Y, T, WL, Y, WM, Y, Q
-21, A, Y, Y, Y, I, T, K, Y, Y, Y, WL, Y, WL, Y, Q
-80, C, Y, Y, Y, I, C, G, Y, Y, Y, WL, Y, WL, Y, S
-69, A, Y, Y, Y, L, T, K, Y, Y, Y, WL, Y, WL, Y, R
-60, B, Y, Y, Y, L, T, K, Y, Y, Y, WM, Y, WL, Y, P
-28, B, T, Y, T, I, T, G, Y, Y, Y, WM, Y, WL, Y, S
-18, A, Y, Y, Y, I, C, G, Y, Y, Y, WL, Y, WL, Y, Q
-23, B, Y, Y, Y, I, T, G, Y, Y, Y, WL, Y, WM, T, Q
 34, B, Y, Y, Y, L, C, K, Y, T, T, WL, T, WL, Y, Q
-58, B, Y, T, Y, L, T, K, T, T, Y, WL, Y, WL, Y, R
-65, B, Y, Y, Y, I, C, G, Y, Y, Y, WL, Y, WL, Y, R
+76, B, Y, Y, Y, I, C, K, Y, Y, Y, WM, T, WL, Y, R
+89, A, Y, Y, Y, L, C, G, T, T, Y, WL, Y, WL, Y, R
+33, B, Y, Y, Y, L, T, G, T, T, T, WM, T, WL, Y, R
+30, A, Y, Y, Y, L, C, K, Y, Y, Y, WM, Y, WL, Y, R
+27, B, Y, Y, Y, L, C, K, Y, Y, Y, WL, Y, WL, Y, R
+20, B, Y, Y, Y, L, T, G, T, T, Y, WL, Y, WL, Y, R
+24, A, Y, Y, Y, L, T, G, Y, Y, Y, WL, Y, WL, Y, R
 77, B, Y, Y, Y, L, C, G, Y, T, Y, WL, Y, WL, Y, Q
-67, B, Y, Y, Y, I, T, K, Y, Y, Y, WL, Y, WL, T, S
-42, B, Y, Y, Y, I, T, G, T, Y, T, WM, T, WL, Y, R
-78, B, Y, Y, Y, L, T, K, Y, Y, Y, WL, T, WL, Y, S
 2, B, T, Y, Y, L, T, K, T, Y, Y, WL, Y, WL, Y, R
-17, A, Y, Y, T, L, C, G, Y, Y, Y, WL, Y, WL, Y, Q
-94, A, Y, Y, Y, L, T, K, T, Y, T, WL, T, WL, Y, Q
+91, C, Y, Y, Y, L, C, K, Y, Y, Y, WL, Y, WL, Y, R
+6, B, Y, Y, Y, L, T, G, Y, Y, Y, WL, Y, WL, Y, R
 1, B, Y, Y, Y, L, T, G, T, T, Y, WL, Y, WL, Y, S
-46, B, Y, Y, Y, L, T, K, Y, Y, Y, WL, Y, WL, Y, P
+60, B, Y, Y, Y, L, T, K, Y, Y, Y, WM, Y, WL, Y, P
+45, C, Y, Y, Y, L, C, G, Y, Y, Y, WM, Y, WL, Y, R
+81, B, Y, Y, Y, I, C, G, Y, Y, Y, WL, Y, WL, Y, R
+72, A, T, Y, Y, I, T, K, Y, Y, Y, WL, Y, WL, Y, R
+19, B, Y, Y, Y, I, T, G, Y, Y, Y, WL, Y, WL, Y, P
+36, B, Y, Y, Y, L, T, G, T, T, T, WM, T, WL, Y, Q
+52, A, Y, Y, T, I, C, K, Y, Y, Y, WL, Y, WL, Y, R
+22, A, Y, Y, Y, I, C, G, Y, Y, Y, WL, Y, WM, Y, Q
+41, B, T, Y, Y, L, T, G, Y, Y, Y, WL, Y, WL, T, R
+66, B, Y, Y, Y, L, T, G, Y, Y, Y, WL, Y, WL, Y, R
+94, A, Y, Y, Y, L, T, K, T, Y, T, WL, T, WL, Y, Q
+100, B, Y, Y, Y, I, T, K, Y, T, T, WL, Y, WM, Y, R
+63, B, Y, Y, Y, I, C, K, Y, Y, Y, WL, Y, WM, Y, R
+48, B, Y, Y, Y, I, T, K, Y, Y, Y, WM, Y, WL, Y, S
+43, A, Y, Y, Y, L, T, G, Y, Y, Y, WL, Y, WL, Y, R
+17, A, Y, Y, T, L, C, G, Y, Y, Y, WL, Y, WL, Y, Q
+42, B, Y, Y, Y, I, T, G, T, Y, T, WM, T, WL, Y, R
+23, B, Y, Y, Y, I, T, G, Y, Y, Y, WL, Y, WM, T, Q
+28, B, T, Y, T, I, T, G, Y, Y, Y, WM, Y, WL, Y, S
+25, B, Y, Y, Y, L, C, K, Y, Y, Y, WL, Y, WL, Y, R
+65, B, Y, Y, Y, I, C, G, Y, Y, Y, WL, Y, WL, Y, R
+44, C, Y, Y, Y, L, T, G, T, T, T, WL, T, WL, Y, R
+38, B, Y, Y, Y, L, T, G, Y, T, T, WL, Y, WL, Y, P
+71, B, Y, Y, Y, L, T, G, Y, Y, Y, WL, Y, WL, Y, R
+64, C, Y, Y, Y, I, C, G, Y, Y, Y, WL, Y, WL, Y, R
+67, B, Y, Y, Y, I, T, K, Y, Y, Y, WL, Y, WL, T, S
+39, B, Y, Y, Y, L, T, G, Y, T, T, WL, Y, WL, Y, P
+35, B, Y, Y, Y, L, C, G, Y, Y, Y, WL, Y, WL, Y, R
+13, B, T, Y, T, I, T, K, Y, Y, Y, WL, Y, WL, Y, Q
+80, C, Y, Y, Y, I, C, G, Y, Y, Y, WL, Y, WL, Y, S
+47, B, Y, Y, Y, L, T, G, Y, T, Y, WL, Y, WM, Y, R
+88, B, Y, Y, Y, L, C, G, Y, T, T, WL, T, WL, Y, R
+18, A, Y, Y, Y, I, C, G, Y, Y, Y, WL, Y, WL, Y, Q
+29, B, T, Y, T, I, T, G, Y, Y, Y, WM, Y, WL, Y, R
+86, B, T, Y, Y, I, T, G, Y, Y, Y, WL, Y, WL, Y, R
+8, B, T, Y, Y, I, T, G, Y, Y, Y, WM, Y, WL, Y, P
+68, B, Y, Y, Y, I, C, K, Y, Y, Y, WL, Y, WL, Y, R
+50, A, Y, Y, Y, L, T, K, Y, Y, Y, WL, Y, WL, Y, Q
+69, A, Y, Y, Y, L, T, K, Y, Y, Y, WL, Y, WL, Y, R
+104, B, Y, Y, Y, I, T, G, Y, Y, Y, WL, Y, WL, Y, S
+58, B, Y, T, Y, L, T, K, T, T, Y, WL, Y, WL, Y, R
+26, C, Y, Y, Y, L, C, K, Y, Y, T, WL, Y, WM, Y, Q
+93, B, Y, Y, Y, I, C, K, T, Y, T, WL, Y, WL, T, Q
+99, B, Y, Y, Y, I, C, K, Y, T, Y, WL, Y, WL, T, R
+37, A, T, Y, Y, L, T, G, T, T, T, WL, T, WM, Y, R
+79, B, Y, Y, Y, I, C, K, Y, Y, Y, WL, Y, WL, Y, R
+51, B, Y, Y, Y, I, C, K, Y, Y, Y, WM, Y, WL, Y, R
+75, A, Y, Y, Y, I, C, K, Y, Y, T, WL, T, WM, Y, R
+32, A, Y, Y, Y, L, C, K, Y, Y, T, WL, T, WL, Y, R
+3, A, Y, Y, Y, L, C, K, Y, Y, Y, WL, Y, WL, Y, R
 12, A, Y, Y, Y, I, T, G, Y, Y, Y, WM, T, WM, Y, R
+40, B, Y, Y, Y, L, T, G, Y, T, T, WL, Y, WL, Y, P
+31, A, Y, Y, Y, L, C, G, Y, Y, Y, WM, Y, WL, T, R
+95, A, Y, Y, Y, I, C, G, Y, Y, Y, WL, Y, WL, Y, Q
+85, B, Y, T, Y, L, C, G, Y, Y, Y, WL, Y, WL, Y, R
+92, A, Y, Y, Y, I, C, G, Y, Y, Y, WL, Y, WL, Y, R
+21, A, Y, Y, Y, I, T, K, Y, Y, Y, WL, Y, WL, Y, Q
+9, A, Y, Y, Y, I, T, K, Y, Y, Y, WL, Y, WL, Y, R
+78, B, Y, Y, Y, L, T, K, Y, Y, Y, WL, T, WL, Y, S
+11, B, Y, Y, Y, L, T, K, Y, Y, Y, WM, Y, WL, Y, S
+15, A, Y, Y, Y, L, C, K, Y, Y, Y, WL, Y, WL, Y, R
+49, B, Y, Y, Y, I, C, K, Y, Y, Y, WL, Y, WL, Y, R
+53, B, Y, Y, Y, L, T, K, T, T, Y, WL, Y, WL, Y, R
+7, B, T, Y, Y, I, T, G, Y, Y, Y, WL, Y, WM, Y, P
+46, B, Y, Y, Y, L, T, K, Y, Y, Y, WL, Y, WL, Y, P
+59, B, Y, Y, Y, I, T, K, Y, T, Y, WL, T, WL, T, R
+14, B, T, Y, T, L, T, G, Y, Y, Y, WL, Y, WL, Y, R
+4, B, Y, Y, Y, L, T, G, T, Y, T, WL, T, WL, Y, P
+96, B, Y, Y, Y, I, C, G, Y, Y, Y, WL, Y, WL, Y, R
+62, B, Y, Y, Y, L, T, G, T, Y, T, WL, T, WL, Y, P
 centroid: ['B', 'Y', 'Y', 'Y', 'L', 'T', 'G', 'Y', 'Y', 'Y', 'WL', 'Y', 'WL', 'Y', 'R']
 ------------------
 
-cluster 3 
+cluster 2 
 jumlah anggota: 1 
 ------------------
 84, B, Y, T, Y, I, C, G, T, T, T, WL, T, WL, Y, S
 centroid: ['B', 'Y', 'T', 'Y', 'I', 'C', 'G', 'T', 'T', 'T', 'WL', 'T', 'WL', 'Y', 'S']
+------------------
+
+cluster 3 
+jumlah anggota: 20 
+------------------
+82, A, Y, Y, Y, I, C, G, Y, T, Y, WM, Y, WL, Y, S
+73, B, Y, Y, Y, I, C, G, Y, Y, Y, WM, Y, WL, Y, R
+16, B, Y, Y, Y, I, C, G, Y, Y, Y, WL, Y, WM, Y, S
+101, B, Y, Y, Y, L, C, G, Y, Y, Y, WM, Y, WM, Y, S
+56, A, Y, Y, Y, L, T, G, Y, Y, Y, WM, Y, WM, Y, P
+54, B, Y, Y, Y, L, C, G, Y, Y, Y, WM, Y, WM, Y, P
+10, B, Y, Y, Y, I, C, G, Y, Y, Y, WM, Y, WL, Y, S
+98, A, T, Y, Y, I, C, K, T, Y, Y, WM, T, WL, T, R
+102, B, Y, Y, Y, L, C, G, Y, Y, Y, WM, Y, WM, Y, S
+61, A, Y, Y, Y, I, C, G, Y, Y, Y, WM, Y, WL, Y, S
+87, A, Y, Y, Y, I, C, G, Y, Y, Y, WM, Y, WL, Y, R
+55, A, Y, Y, Y, L, T, G, Y, Y, Y, WM, Y, WM, Y, P
+70, A, Y, Y, Y, I, C, G, Y, Y, Y, WL, Y, WL, Y, S
+74, A, Y, Y, Y, I, C, K, Y, Y, Y, WM, Y, WL, Y, S
+97, A, Y, Y, Y, I, C, K, Y, Y, Y, WM, Y, WL, T, R
+5, B, Y, Y, Y, I, C, G, Y, Y, Y, WM, Y, WL, Y, P
+57, A, Y, Y, Y, L, T, G, Y, Y, Y, WM, Y, WM, Y, P
+83, A, Y, Y, Y, I, C, G, Y, Y, Y, WM, Y, WM, Y, S
+90, A, Y, Y, Y, L, T, G, Y, Y, T, WM, Y, WL, Y, Q
+103, A, Y, Y, Y, L, C, G, Y, Y, Y, WL, Y, WL, Y, S
+centroid: ['A', 'Y', 'Y', 'Y', 'I', 'C', 'G', 'Y', 'Y', 'Y', 'WM', 'Y', 'WL', 'Y', 'S']
 ------------------
 
